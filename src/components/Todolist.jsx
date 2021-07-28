@@ -3,7 +3,7 @@ import Todo from "./todo";
 import TodoForm from './form';
 
 //inital List
-const Todolist = ({ title }) => {
+const Todolist = () => {
   const [todos, setTodos] = useState([
     {
       text: 'learn react',
@@ -19,17 +19,16 @@ const Todolist = ({ title }) => {
     }
   ]);
 
-
-
     const addTodo = text => {
     const newTodos = [...todos, {text, isCompleted:false}];
     setTodos(newTodos);
-  }
-  const removeTodo = index => {
+    }
+
+    const removeTodo = index => {
     let temp = [...todos];
     temp.splice(index, 1);
     setTodos(temp);
-  }
+    }
 
   return (
     //  <>
@@ -56,6 +55,45 @@ const Todolist = ({ title }) => {
         <TodoForm addTodo={addTodo} />
       </div>
     </div>
+
+      // <div class="container">
+      //   <div class="row">
+      //     <div class="col">
+      //           <div className="app">
+      //       <div className="todo-list" >
+      //         <h1>Yesterday's list...</h1>
+      //         {todos.map((todo, i) => (
+      //           <Todo key={i} index={i} todo={todo} remove={removeTodo}/>
+      //         ))}
+      //         <TodoForm addTodo={addTodo} />
+      //       </div>
+      //     </div>
+      //     </div>
+      //     <div class="col">
+      //           <div className="app">
+      //       <div className="todo-list" >
+      //         <h1>Today's list...</h1>
+      //         {todos.map((todo, i) => (
+      //           <Todo key={i} index={i} todo={todo} remove={removeTodo}/>
+      //         ))}
+      //         <TodoForm addTodo={addTodo} />
+      //       </div>
+      //     </div>
+      //     </div>
+      //     <div class="col">
+      //           <div className="app">
+      //       <div className="todo-list" >
+      //         <h1>Tomorrow's list...</h1>
+      //         {todos.map((todo, i) => (
+      //           <Todo key={i} index={i} todo={todo} remove={removeTodo}/>
+      //         ))}
+      //         <TodoForm addTodo={addTodo} />
+      //       </div>
+      //     </div>
+      //     </div>
+      //   </div>
+      // </div>
+
 
   );
 }
