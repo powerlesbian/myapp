@@ -57,6 +57,11 @@ code {
   height: 100vh;
 }
 
+.app2 {
+  background: #b1e4a9;
+  padding: 30px;
+  height: 100vh;
+}
 .todo-list {
   background: #e8e8e8;
   border-radius: 4px;
