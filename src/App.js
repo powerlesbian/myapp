@@ -4,12 +4,19 @@ import Todolist from "./components/Todolist";
 import Lists from './components/Lists';
 import DisplayButton from './components/DisplayButton';
 import DisplayStock from './components/DisplayStock';
+import ATMsimple from './components/ATMsimple';
+
 
 const App = () => (
 
-         <div>
-            <DisplayStock />            
+   
+   <div>
+            <ATMsimple />            
          </div>
+   
+   // <div>
+         //    <DisplayStock />            
+         // </div>
   
    // <div class="container">
    //    <div class="row">
