@@ -21,8 +21,8 @@ const DisplayStock = () => {
         let [name, num] = e.target.innerHTML.split(":");
         let newStock = stock.map((item, index) => 
                 {
-                    if (num == 0) return item;
-                    if (item.name == name) item.instock--;                     
+                    if (num === 0) return item;
+                    if (item.name === name) item.instock--;                     
                     return item;                
                 }
             );
@@ -31,15 +31,20 @@ const DisplayStock = () => {
 
        
  return (
+     
      <div className = "app3">      
         <h1>Our Stock</h1>
          {stock.map((item, index) => 
                 {
+                    
+                    if (item.instock>0){
+                        
                 return (
                      <>
                         <Button variant="primary" onClick={moveToCart} key={index.toString()}>{item.name}:{item.instock}</Button>{' '}
                     </>
                     )
+                }
                 }
              )
          }
