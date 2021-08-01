@@ -98,3 +98,14 @@ code {
   color: teal;
   background-color: bisque;
 }
+
+.atmh1 {
+  text-align: center;
+  align-content: center;
+  color: rgb(62, 19, 206);
+  background-color: rgb(245, 203, 152);
+}
+
+.statusp {
+  color: red;
+}

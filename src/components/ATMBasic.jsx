@@ -21,9 +21,21 @@ const ATMBasic = () => {
   const [isDeposit, setIsDeposit] = useState(true);
   const [atmMode, setAtmMode] = useState('');
   const [validTransaction, setValidTransaction] = useState(false);
+  const [txn, setTxn] = useState([]);
 
-  let status = `Account Balance $ ${totalState} `;
+  var txnType;
+ 
+  let status;
+
+  if (totalState > 0) {status = `Your Account Balance $ ${totalState} `;} 
+  else{status = <p className='statusp'>You have zero balance.Please make a deposit</p>}
+
+  //let status = `Your Account Balance $ ${totalState} `;
+
   //console.log(`Account Rendered with isDeposit: ${isDeposit}`);
+
+
+
   
   const handleChange = (event) => {
     //console.log(Number(event.target.value));
@@ -42,10 +54,17 @@ const ATMBasic = () => {
     let newTotal = isDeposit ? totalState + deposit : totalState - deposit;
     setTotalState(newTotal);
     setValidTransaction(false);
+
     event.preventDefault();
+
+    const newTxn = [...txn, {txnDate:new Date().toLocaleString(), txnTypes:txnType, amount:deposit}];
+    setTxn(newTxn);
+    
   };
 
   const handleModeSelect = (event) => {
+
+    txnType = event.target.value;
     console.log(event.target.value);
     setAtmMode(event.target.value);
     setValidTransaction(false);
@@ -54,15 +73,18 @@ const ATMBasic = () => {
     } else {
       setIsDeposit(false);
     }
+    
   };
 
     return (
        <form onSubmit={handleSubmit}>
       <div>
+        <h1 className='atmh1'>ATM Application (Demo)</h1>
         <h2 id="total">{status}</h2>
         <div>
                 <Button variant="primary" onClick={(e) => handleModeSelect(e)} id="deposit-selection" value="Deposit" > Deposit </Button>
-                <Button variant="primary" onClick={(e) => handleModeSelect(e)} id="cashback-selection" value="Cash Back">Cash Back </Button>
+                &nbsp;&nbsp;&nbsp;
+                <Button variant="secondary" onClick={(e) => handleModeSelect(e)} id="cashback-selection" value="Cash Back">Cash Back </Button>
                  </div>
         
         {/* <label>Select an action below to continue</label>
@@ -82,6 +104,16 @@ const ATMBasic = () => {
             isValid={validTransaction}
           ></ATMDeposit>
         {/* )} */}
+        <div className = "app2">      
+        <h1>My Transaction</h1>
+         {txn.map((txn, index) => 
+                {
+                return <li key={index.toString()}>{txn.txnDate} {txn.txnTypes} {txn.amount}</li>;
+                }
+             )
+         }
+    </div>
+
       </div>
     </form>
     );

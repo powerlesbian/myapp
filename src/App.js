@@ -9,36 +9,27 @@ import './App.css';
 // import ATMchoice from './components/ATMChoice';
 import ATMBasic from './components/ATMBasic';
 
-
-const App = () => (
-   
-      <div>
-          <ATMBasic />
-            
+const App = () => (   
+      <div class="container">
+      <div class="row">
+      <div class="col"></div>
+      <div class="col-6">
+            <ATMBasic />
       </div>
-   
-   // <div>
-         //    <DisplayStock />   
-         // <ATMsimple />  
-         //<ATMadvance />
-         // <ATMchoice />
-         // </div>
-  
-   // <div class="container">
-   //    <div class="row">
-   //       <div class="col">
-   //          <Todolist />
-   //       </div>
-   //       <div class="col">
-   //          <Lists />            
-   //       </div>
-   //       <div class="col">
-   //          {/* <h1>Under construction</h1>  */}
-   //          <DisplayButton />  
-   //       </div>
-   //    </div>
-   // </div>
-   
+      <div class="col"></div>
+      </div> 
+      </div>    
+     
+      // <div>
+      //     <ATMBasic />            
+      // </div>
+      // <div>
+      // <DisplayStock />   
+      // <ATMsimple />  
+      //<ATMadvance />
+      // <ATMchoice />
+      // </div>
+      
       
    );
 
