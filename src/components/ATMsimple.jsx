@@ -27,8 +27,9 @@ const ATMsimple = () => {
    
     return (
      <form onSubmit={handleSubmit}>
+         
       <h2>Account Balance {accountState}</h2>
-      <ATMDeposit onChange={handleChange}> Deposit</ATMDeposit>
+      <ATMDeposit onChange={handleChange}> </ATMDeposit>
     </form>
     );
 }

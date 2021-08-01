@@ -1,21 +1,27 @@
 import React from 'react';
 import './App.css';
-import Todolist from "./components/Todolist";
-import Lists from './components/Lists';
-import DisplayButton from './components/DisplayButton';
-import DisplayStock from './components/DisplayStock';
-import ATMsimple from './components/ATMsimple';
+// import Todolist from "./components/Todolist";
+// import Lists from './components/Lists';
+// import DisplayButton from './components/DisplayButton';
+// import DisplayStock from './components/DisplayStock';
+// import ATMsimple from './components/ATMsimple';
+// import ATMadvance from './components/ATMadvance';
+// import ATMchoice from './components/ATMChoice';
+import ATMBasic from './components/ATMBasic';
 
 
 const App = () => (
-
    
-   <div>
-            <ATMsimple />            
-         </div>
+      <div>
+          <ATMBasic />
+            
+      </div>
    
    // <div>
-         //    <DisplayStock />            
+         //    <DisplayStock />   
+         // <ATMsimple />  
+         //<ATMadvance />
+         // <ATMchoice />
          // </div>
   
    // <div class="container">

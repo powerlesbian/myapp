@@ -37,8 +37,7 @@ const DisplayStock = () => {
          {stock.map((item, index) => 
                 {
                     
-                    if (item.instock>0){
-                        
+                    if (item.instock>0){                        
                 return (
                      <>
                         <Button variant="primary" onClick={moveToCart} key={index.toString()}>{item.name}:{item.instock}</Button>{' '}
