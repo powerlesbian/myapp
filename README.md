@@ -1,3 +1,3 @@
-# Getting Started with Create basic React App (My todo list)
+# React App: fetching and rendering external data
 
-This project demonstrator usage of useState in a React app and how to refactor code into separate components.
+Demonstration of fetch, manipulate, and render data from an external source. Refactoring the Fetching Data From Hacker News exercise and renders data from an external source with React. 
