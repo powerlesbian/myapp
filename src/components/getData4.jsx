@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Pagination = ({ items, pageSize, onPageChange }) => {
   const { Button } = ReactBootstrap;
   if (items.length <= 1) return null;
@@ -85,7 +87,7 @@ const dataFetchReducer = (state, action) => {
   }
 };
 // App that gets data from Hacker News url
-function App() {
+function FetchAndRender() {
   const { Fragment, useState, useEffect, useReducer } = React;
   const [query, setQuery] = useState("MIT");
   const [currentPage, setCurrentPage] = useState(1);
@@ -143,4 +145,4 @@ function App() {
 }
 
 // ========================================
-ReactDOM.render(<App />, document.getElementById("root"));
+export default FetchAndRender;
